@@ -48,9 +48,9 @@ function Card({ element }) {
   }, [setlikedMusic]);
 
   return (
-    <div key={element.id} className="col-lg-3 col-md-6 py-2">
-      <div className="card">
-        <div className="ratio ratio-1x1 bg-secondary bg-opacity-25">
+    <div key={element.id} className="col-lg-3 col-md-6 py-2 rounded-4">
+      <div className="card rounded-4 shadow p-2 mb-4">
+        <div className="ratio ratio-1x1 bg-secondary bg-opacity-25 rounded-4">
           <img
             src={element.album.images[0].url}
             className="card-img-top"
@@ -59,7 +59,7 @@ function Card({ element }) {
         </div>
 
         <div className="card-body">
-          <h5 className="card-title d-flex justify-content-between">
+          <h6 className="card-title d-flex justify-content-between">
             {element.name}
             <div className="add-options d-flex align-items-start">
               {pinnedMusic.some((item) => item.id === element.id) ? (
@@ -123,11 +123,8 @@ function Card({ element }) {
                 </ul>
               </div> */}
             </div>
-          </h5>
-          <p className="card-text">Artist: {element.album.artists[0].name}</p>
-          <p className="card-text">
-            Release date: {element.album.release_date}
-          </p>
+          </h6>
+          <p className="card-text">Artist: {element.album.artists[0].name}<br/>Release date: {element.album.release_date}</p>            
           <audio src={element.preview_url} controls className="w-100"></audio>
         </div>
       </div>
