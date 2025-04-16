@@ -145,10 +145,10 @@ function App() {
         <div className="row">
           <div className="col-12 py-5 text-center">
             <h1>
-              <i className="bi bi-music-note-list mx-3"></i>
-              v-music
+            <i class="bi bi-vinyl-fill mx-3"></i>
+              Now-Music
             </h1>
-            <h3 className="py-5">Discover music in 30 seconds</h3>
+            <h3 className="py-5">Search and Preview Your Songs on the go!</h3>
           </div>
         </div>
       </div>

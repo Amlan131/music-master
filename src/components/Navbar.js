@@ -15,26 +15,9 @@ const Navbar = ({ keyword, handleKeyPress, setKeyword, fetchMusicData }) => {
       <nav className="navbar navbar-dark navbar-expand-lg bg-dark sticky-top">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <i className="bi bi-music-note-list mx-3"></i> Now-Music
+          <i class="bi bi-vinyl-fill mx-3"></i> Now-Music
           </Link>
-          <div>
-            <button
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              className="btn btn-secondary btn-sm mx-1"
-            >
-              <i className="bi bi-pin-angle-fill"></i> {pinnedMusic.length}
-            </button>
-            <button
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#likedMusicModal"
-              className="btn btn-secondary btn-sm mx-1"
-            >
-              <i className="bi bi-heart-fill"></i> {likedMusic.length}
-            </button>
-          </div>
+          
 
           <div
             className="collapse navbar-collapse d-flex justify-content-center"
@@ -44,7 +27,7 @@ const Navbar = ({ keyword, handleKeyPress, setKeyword, fetchMusicData }) => {
               value={keyword}
               onChange={(event) => setKeyword(event.target.value)}
               onKeyDown={handleKeyPress}
-              className="form-control me-2 w-75"
+              className="form-control me-2 w-50"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -54,9 +37,27 @@ const Navbar = ({ keyword, handleKeyPress, setKeyword, fetchMusicData }) => {
                 setResultOffset(0);
                 fetchMusicData();
               }}
-              className="btn btn-outline-success"
+              className="btn btn-primary"
             >
-              Search
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          <div className="mx-3">
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              className="btn btn-info btn-sm mx-1"
+            >
+              <i className="bi bi-pin-angle-fill"></i> {pinnedMusic.length}
+            </button>
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#likedMusicModal"
+              className="btn btn-danger btn-sm mx-1"
+            >
+              <i className="bi bi-heart-fill"></i> {likedMusic.length}
             </button>
           </div>
         </div>
