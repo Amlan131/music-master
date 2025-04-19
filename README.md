@@ -1,14 +1,6 @@
 #music MASTER
 
-v-music is a web application that allows users to search for music using the Spotify API and play 30-second song previews. It is built with React, Bootstrap, and the Spotify Web API ( throught nocodeapi ).
-
-## Installation
-
-To run this project locally, follow these steps:
-
-1. Clone this repository using `git clone https://github.com/vishesh-pandey/v-music.git`
-2. Install dependencies using `npm install`
-3. Start the development server using `npm start`
+now-music is a web application that allows users to search for music using the Spotify API and play 30-second song previews. It is built with React, Bootstrap, and the Spotify Web API.
 
 ## Usage
 
@@ -19,6 +11,4 @@ Once the development server is running, you can access the app by visiting http:
 3. Click the "Play" button on a track to play a 30-second preview of the song
 4. Use the audio player controls to pause, resume, and adjust the volume of the song
 
-## Contributing
 
-If you would like to contribute to this project, feel free to submit a pull request or open an issue. 
